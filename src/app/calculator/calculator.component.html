@@ -10,12 +10,21 @@
 </head>
 <body>
     <main class="form-signin w-100 m-auto">
+      <h1 class="h1 text-center">Kalkulator BMI</h1>
         <form #f="ngForm" (submit)="postForm(f)">
             <input type="number" class="form-control" name="height" ngModel placeholder="Podaj swój wzrost">
             <input type="number" class="form-control" name="weight" ngModel placeholder="Podaj swoją wagę">
-          <button [disabled]="!isUpdated" class="w-100 btn btn-lg btn-primary" type="submit" >Oblicz</button>
+            <div class="row">
+          <button [disabled]="!isUpdated" class="w-100 btn btn-lg btn-primary" type="submit" style="margin-bottom: 5px;">Oblicz</button>
+          <input class="btn btn-danger" type="reset" value="Resetuj" (click)="clear()">
+        </div>
         </form>
         <p class="display-5 fw-bold bmiResults">Twoje bmi wynosi: {{bmi}}</p>
       </main>
+      <div class="row">
+        <div class="col-xs-13">
+          
+        </div>
+      </div>
 </body>
 </html>

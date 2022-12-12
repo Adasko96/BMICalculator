@@ -19,4 +19,9 @@ export class CalculatorComponent {
 
     this.bmi = Math.round((this.weight/(this.height * this.height)*10000)*100) / 100
   }
+
+  clear() {
+    this.bmi = 0
+  }
+
 }
